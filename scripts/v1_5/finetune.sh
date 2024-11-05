@@ -35,7 +35,7 @@ deepspeed llava/train/train_mem.py \
     --dataloader_num_workers 4 \
     --lazy_preprocess True \
     --report_to tensorboard \
-    --mm_vision_token_compression_type llm-local-conv-self-attn-deep \
+    --mm_vision_token_compression_type quecc \
     --mm_vision_output_text_embedding_size 4096 \
     --mm_vision_output_token_count 576 \
     --mm_vision_token_compression_kernel_size 4 \

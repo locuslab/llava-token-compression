@@ -13,7 +13,7 @@ deepspeed llava/train/train_mem.py \
     --mm_use_im_start_end False \
     --mm_use_im_patch_token False \
     --bf16 True \
-    --output_dir ./checkpoints/llava-v1.5-7b-quecc \
+    --output_dir ./checkpoints/llava-v1.5-7b-quecc-pretrain \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
@@ -33,7 +33,7 @@ deepspeed llava/train/train_mem.py \
     --dataloader_num_workers 4 \
     --lazy_preprocess True \
     --report_to tensorboard \
-    --mm_vision_token_compression_type llm-local-conv-self-attn-deep \
+    --mm_vision_token_compression_type quecc \
     --mm_vision_output_text_embedding_size 4096 \
     --mm_vision_output_token_count 576 \
     --mm_vision_token_compression_kernel_size 4 \
