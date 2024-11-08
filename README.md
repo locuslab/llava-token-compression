@@ -1,6 +1,6 @@
 # Inference Optimal VLMs Need Only One Visual Token but Larger Models
 
-![QueCC](assets/arch.png "QueCC Compression Algorithm")
+![Scaling Laws](assets/scaling.png "Scaling Laws for VLMs")
 
 > **Inference Optimal VLMs Need Only One Visual Token but Larger Models**\
 > Kevin Y. Li*, Sachin Goyal*, João D. Semedo, J. Zico Kolter \
@@ -8,13 +8,13 @@
 
 Our repo contains two components: our **QueCC** token compression algorithm and our scaling law fitting code. The QueCC algorithm compresses tokens via a cross-attention mechanism that utilizes query-based convolutional downsampling. 
 
-## Scaling Law Findings
+## Scaling Law Findings and code
 Our scaling laws find that for various visual understanding and reasoning tasks, under fixed VLM inference compute, it is more optimal to utilize the largest LLM component by reducing the number of visual tokens. In fact, performance on these types of tasks vary $5\times$ faster when adjusting the number of LLM parameters than the number of visual tokens. However, for OCR-like tasks, the opposite is true: the number of visual tokens is more important the size of the LLM.
-![Scaling Laws](assets/scaling.png "Scaling Laws for VLMs")
 
 The relevant code that we used to fit our scaling laws can be found in the [scaling_law_code/](scaling_law_code/) folder and the instructions can be found in its [README](scaling_law_code/README.md).
 
-## Usage
+## Query Based Token Compression
+![QueCC](assets/arch.png "QueCC Compression Algorithm")
 Our repo is built upon the original [LLaVA repo](https://github.com/haotian-liu/LLaVA). Setup, training hyperparameters, etc., are the same as detailed in the linked repo.
 
 The QueCC token compression module is spread across a couple files. These components can be copied and transferred over to one's own repository:
