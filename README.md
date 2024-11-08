@@ -15,7 +15,7 @@ The relevant code that we used to fit our scaling laws can be found in the [scal
 
 ## Query Based Token Compression
 ![QueCC](assets/arch.png "QueCC Compression Algorithm")
-Our repo is built upon the original [LLaVA repo](https://github.com/haotian-liu/LLaVA). Setup, training hyperparameters, etc., are the same as detailed in the linked repo.
+Our repo is built upon the original [LLaVA repo](https://github.com/haotian-liu/LLaVA). We thanks the authors for releasing their codebase. Setup, training hyperparameters, etc., are the same as detailed in the linked repo.
 
 The QueCC token compression module is spread across a couple files. These components can be copied and transferred over to one's own repository:
 
